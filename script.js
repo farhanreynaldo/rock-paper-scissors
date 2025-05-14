@@ -59,16 +59,38 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
+const result = document.querySelector("#result");
+const score = document.createElement("p");
+
+function checkWinner(humanScore, computerScore) {
+    if (humanScore >= 5 || computerScore >= 5) {
+        if (humanScore >= 5) {
+            score.textContent = "You win!";
+        } else {
+            score.textContent = "You lose!";
+        }
+    }
+};
+
 rock.addEventListener("click", () => {
-    computerChoice = getComputerChoice()
-    playRound(rock.id, computerChoice)
+    computerChoice = getComputerChoice();
+    playRound(rock.id, computerChoice);
+    score.textContent = `Human score = ${humanScore}; computerScore = ${computerScore}`;
+    result.appendChild(score);
+    checkWinner(humanScore, computerScore);
+    
 });
 paper.addEventListener("click", () => {
-    computerChoice = getComputerChoice()
-    playRound(paper.id, computerChoice)
+    computerChoice = getComputerChoice();
+    playRound(paper.id, computerChoice);
+    score.textContent = `Human score = ${humanScore}; computerScore = ${computerScore}`;
+    result.appendChild(score);
+    checkWinner(humanScore, computerScore);
 });
 scissors.addEventListener("click", () => {
-    computerChoice = getComputerChoice()
-    playRound(scissors.id, computerChoice)
+    computerChoice = getComputerChoice();
+    playRound(scissors.id, computerChoice);
+    score.textContent = `Human score = ${humanScore}; computerScore = ${computerScore}`;
+    result.appendChild(score);
+    checkWinner(humanScore, computerScore);
 });
-console.log(`Human score = ${humanScore}; computerScore = ${computerScore}`)
