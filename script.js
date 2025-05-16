@@ -1,17 +1,12 @@
 function getComputerChoice() {
   num = Math.random();
   if (num < 0.33) {
-    return "rock";
+    return "elephant";
   } else if (num < 0.67) {
-    return "paper";
+    return "ant";
   } else {
-    return "scissors";
+    return "man";
   }
-}
-
-function getHumanChoice() {
-  choice = prompt("Choose between rock, paper, or scissors");
-  return choice;
 }
 
 function checkWinner() {
@@ -31,17 +26,17 @@ function playRound(humanChoice, computerChoice) {
   computerChoice = computerChoice.toLowerCase();
 
   if (
-    (humanChoice == "rock") & (computerChoice == "paper") ||
-    (humanChoice == "paper") & (computerChoice == "scissors") ||
-    (humanChoice == "scissors") & (computerChoice == "rock")
+    (humanChoice == "elephant") & (computerChoice == "paper") ||
+    (humanChoice == "ant") & (computerChoice == "man") ||
+    (humanChoice == "man") & (computerChoice == "elephant")
   ) {
     currentStatus.textContent = `${computerChoice} beats ${humanChoice}`;
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
     computerScore++;
   } else if (
-    (humanChoice == "paper") & (computerChoice == "rock") ||
-    (humanChoice == "scissors") & (computerChoice == "paper") ||
-    (humanChoice == "rock") & (computerChoice == "scissors")
+    (humanChoice == "ant") & (computerChoice == "elephant") ||
+    (humanChoice == "man") & (computerChoice == "ant") ||
+    (humanChoice == "elephant") & (computerChoice == "man")
   ) {
     currentStatus.textContent = `${humanChoice} beats ${computerChoice}`;
     console.log(`You win! ${humanChoice} beats ${computerChoice}`);
@@ -54,13 +49,13 @@ function playRound(humanChoice, computerChoice) {
 
 function fetchImage(choice) {
   switch (choice) {
-    case "rock":
+    case "elephant":
       return "images/elephant.png";
       break;
-    case "paper":
+    case "ant":
       return "images/ant.png";
       break;
-    case "scissors":
+    case "man":
       return "images/man.png";
       break;
   }
