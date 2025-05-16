@@ -4,15 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
-    <script src="script.js" defer></script>
+    <div class="header">
+        <h1>Elephant, ant, man</h1>
+        <p>Elephant, ant, man is a traditional games in Indonesia that is similar with Rock-paper-scissors from China
+            and Japan. The rules are as follows: Elephant wins over man because he can trample him, Man wins over ant
+            because he can step on him, Ant wins over elephant because he can run up his trunk and tickle him to death.
+        </p>
+    </div>
+    <div class="hand">
+        <div class="human sign">
+            <img src="images/ant.png" alt="Ant" />
+            <p>You</p>
+        </div>
+        <div class="current status">
+            <h2>VS</h2>
+        </div>
+        <div class="computer sign">
+            <img src="images/elephant.png" alt="elephant" />
+            <p>Computer</p>
+        </div>
+    </div>
+    <div class="human-buttons">
+        <button id="rock">Elephant</button>
+        <button id="paper">Ant</button>
+        <button id="scissors">Man</button>
+    </div>
+    <div class="result">
+        <p>Play the game!</p>
+    </div>
 </body>
-<button id="rock">Rock</button>
-<button id="paper">Paper</button>
-<button id="scissors">Scissors</button>
-<div id="result"></div>
 
 </html>
