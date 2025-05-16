@@ -1,12 +1,14 @@
 @import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
 
 * {
-  box-sizing: border-box;
-  font-family: "JetBrains Mono", monospace;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
 }
 
 body {
-    margin: 5% 20%;
+    margin: 3% 25%;
+    background-color: #000;
+    color: #fff;
 }
 
 img {
@@ -43,6 +45,7 @@ button:active {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin: 20px;
 }
 
 .sign {
@@ -51,6 +54,7 @@ button:active {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    flex-shrink: 0;
 }
 
 .human-buttons {
