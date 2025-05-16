@@ -1,0 +1,48 @@
+@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+
+* {
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+body {
+    margin: 5% 20%;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+}
+
+.header {
+    padding: 20px;
+    margin: 20px;
+}
+
+.hand {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.human-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+
