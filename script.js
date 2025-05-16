@@ -18,6 +18,7 @@ function checkWinner() {
     }
     humanScore = 0;
     computerScore = 0;
+    currentStatus.textContent = "VS";
   }
 }
 
@@ -66,7 +67,7 @@ const result = document.querySelector(".result");
 const score = document.querySelector(".result > p");
 const humanSign = document.querySelector(".human.sign img");
 const computerSign = document.querySelector(".computer.sign img");
-const currentStatus = document.querySelector(".current.status h2");
+const currentStatus = document.querySelector(".current.status p");
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
