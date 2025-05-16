@@ -35,6 +35,7 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice == "paper") & (computerChoice == "scissors") ||
     (humanChoice == "scissors") & (computerChoice == "rock")
   ) {
+    currentStatus.textContent = `${computerChoice} beats ${humanChoice}`;
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
     computerScore++;
   } else if (
@@ -42,9 +43,11 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice == "scissors") & (computerChoice == "paper") ||
     (humanChoice == "rock") & (computerChoice == "scissors")
   ) {
+    currentStatus.textContent = `${humanChoice} beats ${computerChoice}`;
     console.log(`You win! ${humanChoice} beats ${computerChoice}`);
     humanScore++;
   } else {
+    currentStatus.textContent = `It's a draw!`;
     console.log(`It's a draw!`);
   }
 }
