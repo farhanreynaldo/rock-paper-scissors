@@ -30,8 +30,7 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice == "ant") & (computerChoice == "man") ||
     (humanChoice == "man") & (computerChoice == "elephant")
   ) {
-    currentStatus.textContent = `${computerChoice} beats ${humanChoice}`;
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+    currentStatus.textContent = `${humanChoice} is beaten by ${computerChoice}`;
     computerScore++;
   } else if (
     (humanChoice == "ant") & (computerChoice == "elephant") ||
@@ -39,7 +38,6 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice == "elephant") & (computerChoice == "man")
   ) {
     currentStatus.textContent = `${humanChoice} beats ${computerChoice}`;
-    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
     humanScore++;
   } else {
     currentStatus.textContent = `It's a draw!`;
